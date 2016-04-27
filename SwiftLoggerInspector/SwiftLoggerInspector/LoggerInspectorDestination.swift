@@ -9,11 +9,11 @@
 import Foundation
 import XCGLogger
 
-class LoggerInspectorDestination: XCGFileLogDestination {
+public class LoggerInspectorDestination: XCGFileLogDestination {
     
     var fileUrl: NSURL?
     
-    override init(owner: XCGLogger, writeToFile: AnyObject, identifier: String = "") {
+    override public init(owner: XCGLogger, writeToFile: AnyObject, identifier: String = "") {
         super.init(owner: owner, writeToFile: writeToFile, identifier: identifier)
         
         if writeToFile is NSString {
@@ -28,7 +28,7 @@ class LoggerInspectorDestination: XCGFileLogDestination {
         
     }
     
-    func presentInspector() {
+    public func presentInspector() {
         guard let window = UIApplication.sharedApplication().delegate?.window else {
             return
         }

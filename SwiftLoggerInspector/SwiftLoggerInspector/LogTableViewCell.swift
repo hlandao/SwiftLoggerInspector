@@ -9,11 +9,11 @@
 import UIKit
 import XCGLogger
 
-class LogTableViewCell: UITableViewCell {
+public class LogTableViewCell: UITableViewCell {
     
     let textView = UITextView()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.contentView.addSubview(textView)
@@ -28,7 +28,7 @@ class LogTableViewCell: UITableViewCell {
         textView.editable = false
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

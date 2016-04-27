@@ -1,3 +1,4 @@
+
 //
 //  LoggerInspectorViewController.swift
 //  SwiftLoggerInspector
@@ -10,7 +11,7 @@ import Foundation
 import SnapKit
 import XCGLogger
 
-class LoggerInspectorViewController: UIViewController {
+public class LoggerInspectorViewController: UIViewController {
     
     // MARK: Properties
     let titleLabel = UILabel()
@@ -21,17 +22,17 @@ class LoggerInspectorViewController: UIViewController {
     let LOG_CELL_IDENTIFIER = "LogTableViewCell"
     var logs: [String]?
     
-    init(fileUrl: NSURL?) {
+    public init(fileUrl: NSURL?) {
         self.fileUrl = fileUrl
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: Lifecycle
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         view.backgroundColor = UIColor.darkGrayColor()
         initViews()
         logs = readFileToArray(fileUrl)
@@ -39,7 +40,7 @@ class LoggerInspectorViewController: UIViewController {
         setupLongTapHandler()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         
     }
     
@@ -139,11 +140,11 @@ class LoggerInspectorViewController: UIViewController {
 }
 
 extension LoggerInspectorViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let logs = self.logs else {
             return 0
         }
@@ -151,7 +152,7 @@ extension LoggerInspectorViewController: UITableViewDataSource {
         return logs.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(LOG_CELL_IDENTIFIER, forIndexPath: indexPath) as! LogTableViewCell
         
         cell.renderString(logs![indexPath.row])
