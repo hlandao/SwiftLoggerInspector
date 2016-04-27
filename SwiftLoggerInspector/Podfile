@@ -1,0 +1,10 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+ use_frameworks!
+
+target 'SwiftLoggerInspector' do
+    pod 'SnapKit', '~> 0.19.1'
+    pod 'XCGLogger', '~> 3.3'
+end
+
