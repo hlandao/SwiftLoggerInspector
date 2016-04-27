@@ -29,13 +29,12 @@ class LoggerInspectorDestination: XCGFileLogDestination {
     }
     
     func presentInspector() {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        guard let rootViewController = appDelegate.window?.rootViewController else {
+        guard let window = UIApplication.sharedApplication().delegate?.window else {
             return
         }
         
         let inspectorViewController = LoggerInspectorViewController(fileUrl: self.fileUrl)
-        rootViewController.presentViewController(inspectorViewController, animated: true, completion: nil)
+        window?.rootViewController?.presentViewController(inspectorViewController, animated: true, completion: nil)
     }
 }
 
