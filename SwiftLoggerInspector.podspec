@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/hlandao/SwiftLoggerInspector"
   s.license      = "MIT"
   s.author       = { "Hadar Landao" => "hlandao@gmail.com" }
-  s.source       = { :git => "https://github.com/hlandao/SwiftLoggerInspector.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/hlandao/SwiftLoggerInspector.git", :tag => "0.0.2" }
   s.source_files = "SwiftLoggerInspector/SwiftLoggerInspector/LoggerInspectorDestination.swift", "SwiftLoggerInspector/SwiftLoggerInspector/LoggerInspectorViewController.swift", "SwiftLoggerInspector/SwiftLoggerInspector/LogTableViewCell.swift"
   s.dependency "SnapKit", "~> 0.19.1"
   s.dependency "XCGLogger", "~> 3.3"
