@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftLoggerInspector"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "On screen logs inspector for XCGLogger"
   s.description  = <<-DESC
                    A XCGLogger destination that lets you present to the logs on the screen of the running device
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/hlandao/SwiftLoggerInspector"
   s.license      = "MIT"
   s.author       = { "Hadar Landao" => "hlandao@gmail.com" }
-  s.source       = { :git => "https://github.com/hlandao/SwiftLoggerInspector.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/hlandao/SwiftLoggerInspector.git", :tag => "0.0.4" }
   s.source_files = "SwiftLoggerInspector/SwiftLoggerInspector/LoggerInspectorDestination.swift", "SwiftLoggerInspector/SwiftLoggerInspector/LoggerInspectorViewController.swift", "SwiftLoggerInspector/SwiftLoggerInspector/LogTableViewCell.swift"
   s.dependency "SnapKit", "~> 0.19.1"
   s.dependency "XCGLogger", "~> 3.3"
