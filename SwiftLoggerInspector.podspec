@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftLoggerInspector"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "On screen logs inspector for XCGLogger"
   s.description  = <<-DESC
                    A XCGLogger destination that lets you present to the logs on the screen of the running device
